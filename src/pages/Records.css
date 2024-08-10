@@ -1,0 +1,110 @@
+.main {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.react-calendar {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.react-calendar__navigation {
+  margin-bottom: 10px; /* Space below the month navigation controls */
+}
+
+.react-calendar__navigation button {
+  margin: 0 5px; /* Space between navigation buttons */
+}
+
+.react-calendar__tile {
+  margin: 10px; /* Adjust margin for spacing between tiles */
+}
+
+.react-calendar__tile--neighboringMonth {
+  visibility: hidden; /* Hide days from the previous and next months */
+}
+
+.won-day {
+  background: #4CAF50; /* Green for won bets */
+  color: white;
+}
+
+.lost-day {
+  background: #F44336; /* Red for lost bets */
+  color: white;
+}
+
+.past-day {
+  background: #e0e0e0; /* Light grey for past days without records */
+  color: black;
+}
+
+.future-day {
+  background: #ffffff; /* White for future days */
+  color: black;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.record-detail {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.done-icon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 8px;
+}
+
+.done-icon::after {
+  content: '';
+  width: 5px;
+  height: 10px;
+  border: solid #4CAF50;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 2px;
+  left: 5px;
+}
+
+@media (max-width: 600px) {
+  .calendar-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .record-detail {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
