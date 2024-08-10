@@ -1,56 +1,102 @@
 /* General styling */
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.services {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/services-background.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Ensures text is visible on the background */
+}
+
+.services__header {
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background to improve readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.services__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.services__description {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Grid layout for service cards */
+.services__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual service card styling */
+.services__card {
+  background-color: rgba(48, 163, 56, 0.9); /* Semi-transparent dark green */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.services__card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.services__card-description {
+  font-size: 16px;
+}
+
+/* Hover effects */
+.services__card:hover {
+  transform: scale(1.05);
+  background-color: rgba(145, 212, 11, 0.9); /* Semi-transparent bright green */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .services__title {
+    font-size: 36px;
   }
-  
-  .main {
-    text-align: center;
+
+  .services__description {
+    font-size: 16px;
   }
-  
-  .child {
-    display: flex;
-    gap: 20px;
-    flex: 1;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+  .services__card {
+    width: 100%;
   }
-  
-  .section {
-    flex: 1;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    color: #000;
-    transition: transform 0.3s, background-color 0.3s;
+}
+
+@media (max-width: 480px) {
+  .services__title {
+    font-size: 28px;
   }
-  
-  .section-2 {
-    background-color: white; /* Adjust the background color and opacity as needed */
+
+  .services__description {
+    font-size: 14px;
   }
-  
-  .section-1:hover {
-    transform: scale(1.05);
-    background-color: rgba(0, 153, 255, 0.7); /* Change background color on hover */
-    color: white;
+
+  .services__card {
+    padding: 15px;
   }
-  
-  .section-2:hover {
-    transform: scale(1.05);
-    background-color: light-grey; /* Change background color on hover */
+
+  .services__card-title {
+    font-size: 20px;
   }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .child {
-      flex-direction: column;
-    }
-  
-    .section {
-      margin: 10px 0;
-    }
+
+  .services__card-description {
+    font-size: 14px;
   }
-  
+}

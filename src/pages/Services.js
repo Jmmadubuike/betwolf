@@ -3,29 +3,43 @@ import './Services.css';
 
 const Services = () => {
   return (
-    <div className="services-container">
-      <div className="main">
-        <h2>Our Services</h2>
-        <p>At WinBig, we provide essential services to help you achieve consistent success in sports betting. Our expert team is dedicated to offering you the best resources and insights to make informed bets. <br></br> Explore our key services below:</p>
-        
-        <div className="child">
-          <div className="section section-1">
-            <h2>Expert Betting Tips</h2>
-            <p>Receive expertly analyzed betting tips with a focus on 1.30 odds. Our experienced analysts carefully select each tip to ensure a high probability of success, helping you make smarter and more confident bets.</p>
-          </div>
-
-          <div className="section section-2">
-            <h2>In-Depth Match Analysis</h2>
-            <p>Benefit from detailed match analyses covering various sports, including football, basketball, and tennis. Our analyses consider team form, player statistics, and head-to-head records, giving you comprehensive insights to inform your betting decisions.</p>
-          </div>
-
-          <div className="section section-1">
-            <h2>Bankroll Management Guidance</h2>
-            <p>Learn effective bankroll management strategies to ensure long-term betting success. Our guidance includes tips on staking strategies and how to manage your betting funds wisely, helping you avoid common pitfalls.</p>
-          </div>
-
+    <div className="services">
+      <div className="services__header">
+        <h1 className="services__title">Our Services</h1>
+        <p className="services__description">
+          At BetWolf, we offer a range of services designed to help you succeed in the sports betting world. 
+          Explore our services and find out how we can assist you in making informed betting decisions.
+        </p>
+      </div>
+      
+      <div className="services__grid">
+        <div className="services__card">
+          <h2 className="services__card-title">Daily Odds</h2>
+          <p className="services__card-description">
+            Get access to our carefully selected daily odds, designed to give you a winning edge every day.
+          </p>
         </div>
-        <p>With these core services, WinBig equips you with the tools and knowledge you need to make informed betting decisions and achieve consistent wins. Join us today and start your journey to smarter betting and bigger wins!</p>
+
+        <div className="services__card">
+          <h2 className="services__card-title">Expert Predictions</h2>
+          <p className="services__card-description">
+            Benefit from our expert predictions, based on thorough analysis and the latest data.
+          </p>
+        </div>
+
+        <div className="services__card">
+          <h2 className="services__card-title">Betting Strategies</h2>
+          <p className="services__card-description">
+            Learn winning betting strategies that can help you make smarter decisions and maximize your returns.
+          </p>
+        </div>
+
+        <div className="services__card">
+          <h2 className="services__card-title">Customer Support</h2>
+          <p className="services__card-description">
+            Have questions? Our dedicated customer support team is here to assist you with anything you need.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ const Contact = () => {
                target="_blank" 
                rel="noopener noreferrer" 
                className="whatsapp-link">
-              Chat Me Up
+              Chat Us Up
             </a>
           </p>
         </div>
@@ -25,7 +25,7 @@ const Contact = () => {
                target="_blank" 
                rel="noopener noreferrer" 
                className="twitter-link">
-              Follow Me
+              Follow Us
             </a>
           </p>
         </div>

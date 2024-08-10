@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './Records.css';
 
-// Example record data
 const records = [
   { date: new Date('2024-08-01'), status: 'won' },
   { date: new Date('2024-08-02'), status: 'lost' },
@@ -23,20 +22,16 @@ const Records = () => {
     setDate(newDate);
   };
 
-  // Function to determine the class name for each day
   const tileClassName = ({ date }) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    
-    // Convert date to YYYY-MM-DD format for comparison
+
     const dateStr = date.toISOString().split('T')[0];
-    
-    // Check if the date is today or in the future
+
     if (date > today) {
       return 'future-day';
     }
 
-    // Find record for the date
     const record = records.find(record => record.date.toISOString().split('T')[0] === dateStr);
     if (record) {
       return record.status === 'won' ? 'won-day' : 'lost-day';
@@ -46,18 +41,19 @@ const Records = () => {
   };
 
   return (
-    <div className="main">
-      <h1>WinBig - Your Daily Sports Betting Insights!</h1>
-      <h2>Our Track Records are displayed here for Transparency.</h2>
-      <div className="calendar-container">
+    <div className="records-container">
+      <header className="records-header">
+        <h1>BetWolf - Daily Sports Betting Records</h1>
+        <p>Transparency is key. Here’s a detailed view of our daily betting records.</p>
+      </header>
+      <div className="calendar-section">
         <Calendar
           onChange={handleDateChange}
           value={date}
           tileClassName={tileClassName}
         />
-        <div className="details">
+        <div className="details-section">
           <h2>Details for {date.toDateString()}</h2>
-          {/* Example detail */}
           <div className="record-detail">
             <p>
               <span className="done-icon"></span>

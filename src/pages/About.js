@@ -3,30 +3,33 @@ import './About.css';
 
 const About = () => {
   return (
-    <div className="about-container">
-      <div className="main">
-        <h2>About Us</h2>
-        <p>Welcome to BetWolf, your premier destination for securing consistent and reliable 1.30 odds in sports betting. At BetWolf, we are committed to providing our users with the best possible chance to win by offering expertly curated betting tips and strategies that maximize your potential and success.</p>
-        
-        <div className="about-sections">
-          <div className="section section-1">
-            <h2>Our Mission</h2>
-            <p>Our mission is to empower bettors with the knowledge and tools they need to make informed decisions. We understand that betting is not just luck, but about making smart choices based on data and analysis. That's why our team of experienced analysts work tirelessly to ensure that every tip we provide is backed by thorough research and a deep understanding of the sports we cover.</p>
+    <div className="about">
+      <div className="about__main">
+        <h1 className="about__title">About BetWolf</h1>
+        <p className="about__description">
+          At BetWolf, we believe in empowering bettors with the insights and tools they need to succeed. Our platform 
+          offers expert sports betting predictions and daily 1.30 odds to help you make informed decisions. Whether you're 
+          a seasoned bettor or new to the game, BetWolf is your trusted partner in the world of sports betting.
+        </p>
+
+        <div className="about__sections">
+          <div className="about__section about__section--vision">
+            <h2 className="about__section-title">Our Vision</h2>
+            <p className="about__section-description">
+              To become the leading provider of sports betting insights, delivering reliable predictions and expert analysis 
+              that bettors can trust. We aim to help our users make smarter bets and consistently achieve winning results.
+            </p>
           </div>
 
-          <div className="section section-2">
-            <h2>Our Vision</h2>
-            <p>We envision a world where bettors can approach sports betting with confidence, knowing they have a trusted partner in BetWolf. Our goal is to be the leading platform for reliable betting tips, helping our users to consistently make profitable bets and achieve their financial goals.</p>
-          </div>
-
-          <div className="section section-1">
-            <h2>Why Choose Us</h2>
-            <p>Expert Analysis: Our team consists of seasoned analysts with years of experience in sports betting. They use their expertise to identify the best opportunities and provide you with actionable insights.</p>
-            <p>Reliable Odds: We focus on providing 1.30 odds, a sweet spot that balances risk and reward. Our consistent success rate ensures that you have a steady stream of winning bets.</p>
+          <div className="about__section about__section--mission">
+            <h2 className="about__section-title">Our Mission</h2>
+            <p className="about__section-description">
+              Our mission is to provide accurate, data-driven predictions and insights that empower our users to make informed 
+              betting decisions. We strive to create a user-friendly platform where bettors of all levels can benefit from our 
+              expertise and achieve success.
+            </p>
           </div>
         </div>
-        <h2>Join Us</h2>
-        <p>Whether you're a seasoned bettor or just starting out, WinBig is here to help you achieve consistent success. Join us today and make the first step towards smarter betting and bigger wins.</p>
       </div>
     </div>
   );

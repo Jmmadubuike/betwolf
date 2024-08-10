@@ -1,74 +1,135 @@
 /* General styling */
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.main {
-  padding: 20px;
+.home__main {
   text-align: center;
+  padding: 20px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
-.main::before {
+.home__main::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/background.jpg');
+  background-image: url('../assets/background.jpg'); /* Replace with your image path */
   background-size: cover;
   opacity: 0.3;
   z-index: -1;
 }
 
-h1 {
+.home__title {
   font-size: 48px;
   margin-bottom: 20px;
 }
 
-p {
+.home__description {
   font-size: 18px;
   margin-bottom: 30px;
   max-width: 800px;
 }
 
-.sections {
+/* Child container for sections */
+.home__sections {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
+  flex: 1;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 30px;
 }
 
-.section {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+/* Individual section styling */
+.home__section {
+  flex: 1;
   border-radius: 10px;
-  width: 100%;
-  max-width: 500px;
+  padding: 20px;
+  margin: 10px;
+  color: #000;
+  transition: transform 0.3s, background-color 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.section-1 {
-  background-color: rgba(0, 153, 255, 0.7); /* blue background */
+.home__section--primary {
+  background-color: rgba(0, 153, 255, 0.7); /* Dark green */
   color: #000;
 }
 
-.section-2 {
-  background-color: rgba(255, 138, 3, 0.7); /* orange background */
+.home__section--secondary {
+  background-color: rgba(255, 138, 3, 0.7); /* Bright orange */
   color: #000;
 }
 
-.button-container {
+/* Hover effects */
+.home__section:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+.home__section--primary:hover {
+  background-color: rgba(0, 153, 255, 0.9);
+}
+
+.home__section--secondary:hover {
+  background-color: rgba(255, 138, 3, 0.9);
+}
+
+/* Football tips styling */
+.home__football-tips {
+  margin-top: 30px;
+  background-color: #30a338; /* Dark green */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center content horizontally */
+}
+
+.home__football-tips-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.home__football-tip {
+  margin-bottom: 20px;
+}
+
+.home__football-league {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.home__football-teams {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000; /* Red color for team names */
+  transition: color 0.3s ease;
+}
+
+.home__football-teams:hover {
+  color: #cc0000; /* Brighter red on hover */
+}
+
+.home__football-bookie {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Button container styling */
+.home__button-container {
   margin-top: 20px;
 }
 
-.button-link {
+.home__button-link {
   padding: 10px 20px;
   background-color: #ff0000;
   color: white;
@@ -77,35 +138,43 @@ p {
   transition: background-color 0.3s ease;
 }
 
-.button-link:hover {
+.home__button-link:hover {
   background-color: #0099ff;
 }
 
+/* Responsive styling */
 @media (max-width: 768px) {
-  h1 {
+  .home__title {
     font-size: 36px;
   }
 
-  p {
+  .home__description {
     font-size: 16px;
   }
 
-  .section {
-    width: 100%;
-    max-width: 100%;
+  .home__sections {
+    flex-direction: column;
+  }
+
+  .home__section {
+    margin: 10px 0;
+  }
+
+  .home__football-tips {
+    padding: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
+  .home__title {
     font-size: 28px;
   }
 
-  p {
+  .home__description {
     font-size: 14px;
   }
 
-  .button-link {
+  .home__button-link {
     font-size: 16px;
     padding: 8px 16px;
   }

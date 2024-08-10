@@ -3,12 +3,9 @@
   color: #fff;
   padding: 20px 20px;
   text-align: center;
-  width: 100%; /* Ensure the footer spans the full width */
-  box-sizing: border-box; /* Include padding in the element's width and height */
 }
 
 .footer-content {
-  max-width: 1200px; /* Match the width with the main page content */
   margin: 0 auto;
   display: flex;
   flex-direction: column;

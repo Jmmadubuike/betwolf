@@ -1,50 +1,88 @@
-.main {
-  text-align: center;
-  font-family: Arial, sans-serif;
+/* General styling */
+.records-container {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Center all text */
 }
 
-.calendar-container {
+.records-header {
+  margin-bottom: 30px;
+}
+
+.records-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.records-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Calendar section styling */
+.calendar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  gap: 20px;
 }
 
 .react-calendar {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  max-width: 100%;
 }
 
 .react-calendar__navigation {
-  margin-bottom: 10px; /* Space below the month navigation controls */
+  margin-bottom: 20px;
 }
 
 .react-calendar__navigation button {
-  margin: 0 5px; /* Space between navigation buttons */
+  margin: 0 8px;
+  background-color: #007BFF; /* Uniform color for navigation buttons */
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #0056b3; /* Uniform color on hover */
+  transform: scale(1.1);
 }
 
 .react-calendar__tile {
-  margin: 10px; /* Adjust margin for spacing between tiles */
+  margin: 5px; /* Adjusted margin for spacing between dates */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.react-calendar__tile:hover {
+  transform: scale(1.05);
 }
 
 .react-calendar__tile--neighboringMonth {
-  visibility: hidden; /* Hide days from the previous and next months */
+  visibility: hidden;
 }
 
 .won-day {
-  background: #4CAF50; /* Green for won bets */
+  background: #28a745; /* Green for won bets */
   color: white;
 }
 
 .lost-day {
-  background: #F44336; /* Red for lost bets */
+  background: #dc3545; /* Red for lost bets */
   color: white;
 }
 
 .past-day {
-  background: #e0e0e0; /* Light grey for past days without records */
+  background: #e9ecef; /* Light grey for past days without records */
   color: black;
 }
 
@@ -53,58 +91,111 @@
   color: black;
 }
 
-.details {
+/* Details section styling */
+.details-section {
   margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.details-section:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.02);
 }
 
 .record-detail {
   border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 8px;
   margin-top: 10px;
-  display: inline-block;
-  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.record-detail:hover {
+  background-color: #28a745;
+  color: white;
+  transform: scale(1.02);
 }
 
 p {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* Center the text horizontally */
+  margin: 0;
+  font-size: 16px;
 }
 
 .done-icon {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #4CAF50;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #28a745;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .done-icon::after {
   content: '';
-  width: 5px;
-  height: 10px;
-  border: solid #4CAF50;
+  width: 6px;
+  height: 12px;
+  border: solid #28a745;
   border-width: 0 2px 2px 0;
   display: inline-block;
   position: absolute;
   transform: rotate(45deg);
-  top: 2px;
-  left: 5px;
+  top: 4px;
+  left: 7px;
 }
 
-@media (max-width: 600px) {
-  .calendar-container {
-    width: 100%;
-    padding: 0 10px;
+/* Responsive styling */
+@media (max-width: 768px) {
+  .calendar-section {
+    padding: 0 15px;
   }
-  
+
+  .react-calendar {
+    width: 100%;
+  }
+
+  .details-section {
+    width: 100%;
+  }
+
   .record-detail {
     width: 100%;
-    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .react-calendar {
+    padding: 10px;
+  }
+
+  .react-calendar__tile {
+    margin: 5px;
+  }
+
+  .record-detail {
+    padding: 10px;
+  }
+
+  .done-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .done-icon::after {
+    width: 5px;
+    height: 10px;
   }
 }
