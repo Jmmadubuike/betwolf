@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/betwolf/static/css/main.89e4fdab.css",
-    "main.js": "/betwolf/static/js/main.3bb633b5.js",
+    "main.css": "/betwolf/static/css/main.fcc0b8bf.css",
+    "main.js": "/betwolf/static/js/main.f459201a.js",
     "static/js/453.419a5d54.chunk.js": "/betwolf/static/js/453.419a5d54.chunk.js",
+    "static/media/background.jpg": "/betwolf/static/media/background.70be8a8f5fae8431eb61.jpg",
+    "static/media/about-background.jpg": "/betwolf/static/media/about-background.a70ed5e7b3f7faaa2172.jpg",
     "static/media/logo.png": "/betwolf/static/media/logo.b077f9cd679c9df850ba.png",
-    "static/media/background.jpg": "/betwolf/static/media/background.e4c31437ed95e448f83e.jpg",
+    "static/media/services-background.jpg": "/betwolf/static/media/services-background.af70e0ddd15a33b582c6.jpg",
+    "static/media/contact-background.jpg": "/betwolf/static/media/contact-background.e09c7715afd28a149f46.jpg",
     "index.html": "/betwolf/index.html",
-    "main.89e4fdab.css.map": "/betwolf/static/css/main.89e4fdab.css.map",
-    "main.3bb633b5.js.map": "/betwolf/static/js/main.3bb633b5.js.map",
+    "main.fcc0b8bf.css.map": "/betwolf/static/css/main.fcc0b8bf.css.map",
+    "main.f459201a.js.map": "/betwolf/static/js/main.f459201a.js.map",
     "453.419a5d54.chunk.js.map": "/betwolf/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89e4fdab.css",
-    "static/js/main.3bb633b5.js"
+    "static/css/main.fcc0b8bf.css",
+    "static/js/main.f459201a.js"
   ]
 }
